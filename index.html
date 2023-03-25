@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+<main>  
+
+<div class="logo">  
+<img src="https://raw.githubusercontent.com/shempill24/front-end-mentor-challenges/525341993bc145a2d84fd065c0ecc14e6f96e0d3/tip-calculator-app-main/images/logo.svg" alt="logo"/>
+</div>
+
+<div class="cal_wrapper">
+<section class="left">  
+  <div class="left_div bill">
+  <h5 class="head bill">Bill</h5>
+  <input class="bill_input" type="number" placeholder="0" min ="0" max="9999999999" value="" required></input>
+  </div>
+
+  <div class="left_div tip">
+    <h5 class="head tip">Select Tip %</h5>
+    <div class="percentage">
+      <button class="perc" id="per_5" value="5">5%</button>
+      <button class="perc" id="per_10" value="10">10%</button>
+      <button class="perc" id="per_15" value="15">15%</button>
+      <button class="perc" id="per_25"value='25'>25%</button>
+      <button class="perc" id="per_50" value="50">50%</button>
+      <button class="perc" id="per_cus" value="cust"><span id="custom_txt">Custom</span></button>
+      <input id="custom" class="display_none" type="text"/input>
+    </div>
+  </div>
+  <div class="left_div">
+    <h5 class="head ppl">Number of People</h5>
+    <input class="ppl_input"type="number" placeholder="1" min="1" required/>
+  </div>
+</section>
+
+
+<section class="right">
+  
+  <div class="cal_tip">
+  <div><h5>Tip Amount</h5>
+  <h6>/ person</h6></div>
+<h2 class="calculation_pptip">$0.00</h2>
+</div>
+<div class="cal_total">
+  <div><h5>Total</h5>
+  <h6>/ person</h6></div>
+  <div><h2 class="calculation_pp">$0.00</h2></div>
+</div>
+
+<button class="clear">RESET</button>
+</div>
+</section>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">sbarettino24</a>.
+  </div>
+</main>
+<script href="/main.js" src="/main.js"></script>
+</body>
+</html>

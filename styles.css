@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:hsl(185, 41%, 84%) ;
+    font-family: 'Space Mono', monospace;
+
+}
+.logo{
+    padding: 75px;
+}
+/* inputs */
+input{
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    font-size: 24px;
+    font-family: 'Space Mono', monospace;
+}
+.bill_input{
+    background-image: url(https://raw.githubusercontent.com/shempill24/front-end-mentor-challenges/525341993bc145a2d84fd065c0ecc14e6f96e0d3/tip-calculator-app-main/images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    width: 100%;
+    text-align: right;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+.ppl_input{
+    background-image: url(https://raw.githubusercontent.com/shempill24/front-end-mentor-challenges/525341993bc145a2d84fd065c0ecc14e6f96e0d3/tip-calculator-app-main/images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    text-align: right;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.cal_wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 40px 70px 40px 40px;
+    border-radius: 20px;
+    background-color: hsl(0, 0%, 100%);
+
+}
+/* left */
+.left_div:nth-of-type(2){
+    padding: 30px 0;
+
+}
+.head{
+    color: hsl(184, 14%, 56%);
+    padding-bottom: 10px;
+}
+.percentage{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+#custom{
+    background-color:  hsl(189, 41%, 97%);
+    width: 100px;
+    color: hsl(183, 100%, 15%);
+    font-family: 'Space Mono', monospace;
+    padding: 4px 4px;
+    font-size: 20px;
+    border:solid 3px hsl(172, 67%, 45%);
+    border-radius: 5px;
+}
+#per_cus{
+    color:hsl(183, 100%, 15%);
+    background-color: hsl(185, 41%, 84%);
+}
+#custom:active{
+    border:solid 3px hsl(172, 67%, 45%);
+}
+.display_none{
+    display: none;
+}
+.active_perc{
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+button{
+    background-color:  hsl(183, 100%, 15%);
+    color: white;
+    font-family: 'Space Mono', monospace;
+    padding: 4px 4px;
+    font-size: 20px;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+/* right */
+
+.right{
+    background-color: hsl(183, 100%, 15%);
+    margin: 0 30px 0 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px 0 30px;
+    width: 100%;
+
+}
+.cal_total, .cal_tip{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding-bottom: 30px;
+}
+.cal_tip h5, .cal_total h5{
+    color: white;
+}
+.cal_tip h6, .cal_total h6{
+    color: hsl(184, 14%, 56%);
+}
+.calculation_pp, .calculation_pptip{
+    color:hsl(172, 67%, 45%);
+}
+.clear{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    margin: 20px;
+    font-size: 20px;
+    margin-top:50% ;
+}
+
+@media only screen and (max-width:600px){
+    .logo{
+      height: 25vh;
+    }
+
+    .cal_wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 20px 20px 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .right{
+        margin: 25px 0;
+    }
+    .clear{
+
+        width: 100%;
+        margin: 0 0 25px 0;
+    }
+
+}
