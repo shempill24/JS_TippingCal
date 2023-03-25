@@ -23,6 +23,8 @@ function resetAll(){
 }
 
 clearAll.addEventListener('click', ()=>{
+    billInput.value =""
+    numPpl.value= ""
     totalOutput.innerHTML = `$0.00`
     tipOutput.innerHTML = `$0.00`
     billVal= 0
@@ -53,6 +55,8 @@ tipInput.forEach((tip) => {
                 tipTot = billVal * (tipPerc/100);
                 calTip = tipTot/ppl
                 tipOutput.innerHTML = calTip.toFixed(2)
+                CalTot = (billVal + tipTot)/ppl;
+                totalOutput.innerHTML = CalTot.toFixed(2)
             });
           
         }else{
@@ -60,6 +64,8 @@ tipInput.forEach((tip) => {
             tipTot = billVal * (tipPerc/100);
             calTip = tipTot/ppl
             tipOutput.innerHTML = calTip.toFixed(2)
+            CalTot = (billVal + tipTot)/ppl;
+            totalOutput.innerHTML = CalTot.toFixed(2)
             console.log("else tip")};
     })
    
