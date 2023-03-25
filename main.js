@@ -13,6 +13,15 @@ let ppl = 1
 let calTip = tipTot/ppl
 let CalTot = (billVal + tipTot)/ppl
 
+function resetAll(){
+    tipInput.forEach((tip)=>{
+        tip.classList.remove('active_perc');
+        document.querySelector("#per_cus").classList.remove('display_none');
+        document.querySelector("#custom").classList.add('display_none');
+        console.log('working')
+    });
+}
+
 clearAll.addEventListener('click', ()=>{
     totalOutput.innerHTML = `$0.00`
     tipOutput.innerHTML = `$0.00`
@@ -34,14 +43,7 @@ billInput.addEventListener('change', ()=>{
 tipInput.forEach((tip) => {
     tip.addEventListener('click', ()=>{
         console.log(tip.value)
-        document.querySelector("#per_5").classList.remove('active_perc');
-        document.querySelector("#per_10").classList.remove('active_perc');
-        document.querySelector("#per_15").classList.remove('active_perc');
-        document.querySelector("#per_25").classList.remove('active_perc');
-        document.querySelector("#per_50").classList.remove('active_perc');
-        document.querySelector("#per_cus").classList.remove('active_perc');
-        document.querySelector("#per_cus").classList.remove('display_none');
-        document.querySelector("#custom").classList.add('display_none');
+        resetAll();
         tip.classList.add('active_perc');
         if(tip.value === "cust"){
             document.querySelector("#per_cus").classList.add('display_none');
